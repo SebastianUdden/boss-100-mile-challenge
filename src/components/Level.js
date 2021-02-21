@@ -30,10 +30,16 @@ const LI = styled.li`
   margin: 0;
   align-items: center;
   font-weight: 500;
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
 `;
 const IconWrapper = styled.div`
   width: 50px;
   margin-right: 10px;
+  @media (min-width: 600px) {
+    width: 100px;
+  }
 `;
 
 const Level = ({ isFirst, name, title, challenges, newChallenge, svg }) => (
