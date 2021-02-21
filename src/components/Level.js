@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.li`
   margin: 0 10px;
   min-width: 60vw;
+  min-height: 550px;
   scroll-snap-align: start;
   border: 1px solid #fff;
   background-color: #222;

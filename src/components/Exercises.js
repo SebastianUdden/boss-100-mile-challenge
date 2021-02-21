@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   width: 100vw;
 `;
 const H1 = styled.h1`
-  margin: 0 20px;
+  margin: 0 20px 20px;
   font-size: 26px;
 `;
 const UL = styled.ul`
