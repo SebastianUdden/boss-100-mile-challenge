@@ -8,8 +8,17 @@ const Wrapper = styled.div`
   width: 100vw;
 `;
 const H1 = styled.h1`
+  margin: 0 20px;
+  font-size: 46px;
+  letter-spacing: 15px;
+  text-align: center;
+`;
+const H2 = styled.h2`
   margin: 0 20px 20px;
   font-size: 26px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: orange;
 `;
 const UL = styled.ul`
   list-style-type: none;
@@ -23,7 +32,8 @@ const UL = styled.ul`
 const Exercises = () => {
   return (
     <Wrapper>
-      <H1>BOSS 100 MILE CHALLENGE</H1>
+      <H1>BOSS</H1>
+      <H2>100 MILE CHALLENGE</H2>
       <UL>
         {LEVELS.map((level, index) => (
           <Level {...level} isFirst={index === 0} />

@@ -29,6 +29,7 @@ const LI = styled.li`
   display: flex;
   margin: 0;
   align-items: center;
+  font-weight: 500;
 `;
 const IconWrapper = styled.div`
   width: 50px;
