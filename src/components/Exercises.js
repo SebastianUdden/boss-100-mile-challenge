@@ -4,17 +4,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 0 20px;
+  padding: 0px;
+  width: 100vw;
 `;
 const H1 = styled.h1`
-  margin: 0;
+  margin: 0 20px;
   font-size: 26px;
 `;
 const UL = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
-  width: 300px;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-padding-left: 50px;
