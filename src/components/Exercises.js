@@ -1,6 +1,7 @@
+import React, { useEffect, useRef } from "react";
+
 import { LEVELS } from "../constants/levels";
 import Level from "./Level";
-import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -30,11 +31,19 @@ const UL = styled.ul`
 `;
 
 const Exercises = () => {
+  const levelsRef = useRef(null);
+  useEffect(() => {
+    levelsRef.current.scrollTo({
+      top: 0,
+      left: levelsRef.current.scrollWidth,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <Wrapper>
       <H1>BOSS</H1>
       <H2>100 MILE CHALLENGE</H2>
-      <UL>
+      <UL ref={levelsRef}>
         {LEVELS.map((level, index) => (
           <Level {...level} isFirst={index === 0} />
         ))}
