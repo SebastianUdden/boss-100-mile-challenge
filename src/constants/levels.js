@@ -67,6 +67,10 @@ export const LEVELS = [
     title: "Day 50 - 2021-02-20",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
+      {
+        name: "20 squats",
+        svg: <StickManSquats color="white" />,
+      },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
       {
         name: "30 seconds plank",
@@ -75,10 +79,6 @@ export const LEVELS = [
       {
         name: "20 hip thrusters",
         svg: <StickManHipThrusters color="white" />,
-      },
-      {
-        name: "20 squats",
-        svg: <StickManSquats color="white" />,
       },
     ],
     newChallenge: {
