@@ -8,9 +8,10 @@ const Wrapper = styled.div`
   bottom: 0;
   right: 0;
   transition: max-height 600ms ease;
-  max-height: ${(p) => (p.expanded ? "140px" : "70px")};
+  max-height: ${(p) => (p.expanded ? "160px" : "70px")};
   height: 300px;
   background-color: #222;
+  border-top: 1px solid #282c34;
 `;
 const Expand = styled.button`
   height: 70px;
@@ -45,6 +46,7 @@ const Button = styled.button`
   background-color: #222;
   color: #fff;
   width: 55%;
+  max-width: 350px;
   cursor: pointer;
 `;
 const SmallButton = styled(Button)`
