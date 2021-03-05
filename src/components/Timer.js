@@ -62,7 +62,7 @@ const Time = styled.p`
   letter-spacing: 3px;
   font-size: 22px;
 `;
-const Number = styled.span`
+const N = styled.span`
   display: inline-block;
   width: 18px;
 `;
@@ -96,17 +96,63 @@ const formatTime = (count) => {
   };
 };
 
+const playTone = (frequency = 440, type = "sine") => {
+  const audio = new (window.AudioContext || window.webkitAudioContext)();
+
+  const oscillator = audio.createOscillator();
+  const gain = audio.createGain();
+  gain.connect(audio.destination);
+
+  const attack = 100;
+  const decay = 450;
+  const noteTime = attack + decay;
+  const now = audio.currentTime;
+  oscillator.type = type;
+  oscillator.frequency.setValueAtTime(frequency, now); // value in hertz
+
+  gain.gain.linearRampToValueAtTime(1, now + attack / 1000);
+  gain.gain.linearRampToValueAtTime(0, now + decay / 1000);
+  oscillator.connect(gain);
+  oscillator.start(0);
+  setTimeout(() => {
+    oscillator.stop(0);
+    oscillator.disconnect(gain);
+    gain.disconnect(audio.destination);
+    audio.close();
+  }, noteTime);
+};
+
+const getFrequency = (secondsString) => {
+  const seconds = Number(secondsString);
+  if (seconds % 3 === 0) {
+    return 880;
+  }
+  return seconds % 2 === 0 ? 220 : 440;
+};
+
 const Timer = () => {
   const [expanded, setExpanded] = useState(false);
   const [start, setStart] = useState(false);
   const [count, setCount] = useState(0);
+  const [latest10, setLatest10] = useState(undefined);
   useEffect(() => {
     if (!start) return;
     setTimeout(() => {
       setCount(count + 1);
     }, 100);
   }, [start, count]);
+  useEffect(() => {
+    if (!start) return;
+    playTone(220, "sine");
+  }, [start]);
   const { minutes, seconds, centiseconds } = formatTime(count);
+  useEffect(() => {
+    if (seconds.left !== latest10) {
+      setLatest10(seconds.left);
+      const frequency = getFrequency(seconds.left);
+      playTone(frequency, "sine");
+    }
+  }, [seconds, latest10]);
   return (
     <Wrapper expanded={expanded}>
       <Expand onClick={() => setExpanded(!expanded)}>
@@ -130,14 +176,14 @@ const Timer = () => {
           {start ? "Stop" : "Start"}
         </Button>
         <Time>
-          <Number>{minutes.left}</Number>
-          <Number>{minutes.right}</Number>
+          <N>{minutes.left}</N>
+          <N>{minutes.right}</N>
           <Divider>:</Divider>
-          <Number>{seconds.left}</Number>
-          <Number>{seconds.right}</Number>
+          <N>{seconds.left}</N>
+          <N>{seconds.right}</N>
           <Divider>:</Divider>
-          <Number>{centiseconds.left}</Number>
-          <Number>{centiseconds.right}</Number>
+          <N>{centiseconds.left}</N>
+          <N>{centiseconds.right}</N>
         </Time>
       </Row>
     </Wrapper>
