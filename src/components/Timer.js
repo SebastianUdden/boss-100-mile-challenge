@@ -168,12 +168,14 @@ const Timer = () => {
   const handleExpand = () => {
     const body = document.getElementsByTagName("body")[0];
     if (!expanded) {
+      body.style.height = "100%";
       body.style.overflow = "hidden";
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     } else {
+      body.style.height = "auto";
       body.style.overflow = "scroll";
     }
 
