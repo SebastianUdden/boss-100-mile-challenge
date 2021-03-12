@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   right: 0;
   transition: max-height 600ms ease, background-color 200ms ease;
   max-height: ${(p) => (p.expanded ? "100vh" : "70px")};
-  height: 100vh;
+  height: calc(100% - 120px);
   background-color: ${(p) => p.backgroundColor};
   border-top: 1px solid #282c34;
 `;
@@ -164,6 +164,21 @@ const Timer = () => {
   const [count, setCount] = useState(0);
   const [latest10, setLatest10] = useState(undefined);
   const [backgroundColor, setBackgroundColor] = useState("#222");
+
+  const handleExpand = () => {
+    const body = document.getElementsByTagName("body")[0];
+    if (!expanded) {
+      body.style.overflow = "hidden";
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      body.style.overflow = "scroll";
+    }
+
+    setExpanded(!expanded);
+  };
   // const toggleMute = () => {
   //   if (audio.state === "running") {
   //     audio.suspend().then(function () {
@@ -220,9 +235,10 @@ const Timer = () => {
       setBackgroundColor("red");
     }
   }, [state]);
+
   return (
     <Wrapper expanded={expanded} backgroundColor={backgroundColor}>
-      <Expand onClick={() => setExpanded(!expanded)}>
+      <Expand onClick={handleExpand}>
         <Left>
           Timer{" "}
           {!start && count > 0 && (
