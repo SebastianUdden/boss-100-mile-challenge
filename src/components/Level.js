@@ -22,6 +22,14 @@ const P = styled.p`
 `;
 const UL = styled.ul`
   padding: 0;
+  @media (min-width: 600px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      width: 50%;
+    }
+  }
 `;
 const LI = styled.li`
   color: ${(p) => p.color || "inherit"};
@@ -31,7 +39,7 @@ const LI = styled.li`
   align-items: center;
   font-weight: 500;
   @media (min-width: 600px) {
-    font-size: 20px;
+    font-size: 15px;
   }
 `;
 const IconWrapper = styled.div`
@@ -50,7 +58,7 @@ const Level = ({ isFirst, name, title, challenges, newChallenge, svg }) => (
       {challenges.map(({ name, svg }) => (
         <LI color={isFirst ? "orange" : "white"}>
           {svg && <IconWrapper>{svg}</IconWrapper>}
-          {name}
+          <span>{name}</span>
         </LI>
       ))}
       {newChallenge && (

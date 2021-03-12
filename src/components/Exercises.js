@@ -5,8 +5,8 @@ import Level from "./Level";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  padding: 0px;
   width: 100vw;
+  padding: 0 0 50px;
 `;
 const H1 = styled.h1`
   margin: 0 20px;

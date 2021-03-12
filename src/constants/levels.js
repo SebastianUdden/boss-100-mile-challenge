@@ -66,7 +66,7 @@ export const LEVELS = [
   },
   {
     name: "Level 5",
-    title: "Day 5 - 2021-02-20",
+    title: "Day 50 - 2021-02-20",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
