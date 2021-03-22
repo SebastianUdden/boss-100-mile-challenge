@@ -4,12 +4,12 @@ const SVG = styled.svg``;
 const Line = styled.line``;
 const Circle = styled.circle``;
 
-const StickManSquats = ({
+const StickManLunge = ({
   frontColor = "#ffffff",
   middleColor = "#cccccc",
   backColor = "#888888",
   bodyPosition = {
-    torso: { upper: { x: 50, y: 15 }, lower: { x: 50, y: 60 } },
+    torso: { upper: { x: 50, y: 18 }, lower: { x: 50, y: 60 } },
     leftArm: {
       elbow: {
         x: 55,
@@ -36,7 +36,7 @@ const StickManSquats = ({
         y: 75,
       },
       foot: {
-        x: 47,
+        x: 30,
         y: 94,
       },
     },
@@ -46,7 +46,7 @@ const StickManSquats = ({
         y: 73,
       },
       foot: {
-        x: 50,
+        x: 32,
         y: 95,
       },
     },
@@ -66,25 +66,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;65;50"
+            values="30;30;61;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="45;80;45"
+            values="25;25;55;55;25;"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="15;45;15"
+            values="18;18;45;45;18"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y2"
-            values="30;50;30"
+            values="30;30;60;60;30"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -99,25 +99,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="45;80;45"
+            values="25;25;55;55;25;"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="60;87;60"
+            values="32;32;62;62;32"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="30;50;30"
+            values="30;30;60;60;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y2"
-            values="40;46;40"
+            values="40;40;65;65;40"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -134,19 +134,19 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;30;50"
+            values="30;30;61;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="60;75;60;"
+            values="60;60;75;75;60;"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="50;60;50"
+            values="32;32;76;78;32"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -161,7 +161,13 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;55;50"
+            values="32;32;76;78;32"
+            dur="2s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="x2"
+            values="32;32;76;76;32"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -180,25 +186,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;65;50"
+            values="30;30;61;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="15;45;15"
+            values="18;18;45;45;18"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y2"
-            values="60;75;60"
+            values="60;60;75;75;60"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="50;30;50"
+            values="30;30;61;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -215,25 +221,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;65;50"
+            values="30;31;62;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="45;75;45"
+            values="22;22;60;60;22"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="15;45;15"
+            values="18;18;45;45;18"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y2"
-            values="30;50;30"
+            values="30;30;60;60;30"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -248,25 +254,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="45;75;45"
+            values="22;22;60;60;22"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="60;90;60"
+            values="32;32;62;62;32"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="30;50;30"
+            values="30;30;60;60;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y2"
-            values="40;40;40"
+            values="40;40;65;65;40"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -283,19 +289,25 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;30;50"
+            values="30;30;61;62;30"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="y1"
-            values="60;75;60;"
+            values="60;60;75;75;60;"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="x2"
-            values="50;60;50"
+            values="32;32;56;56;32"
+            dur="2s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="y2"
+            values="70;70;92;92;70;"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -310,7 +322,13 @@ const StickManSquats = ({
         >
           <animate
             attributeName="x1"
-            values="50;60;50"
+            values="32;32;56;56;32"
+            dur="2s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="y1"
+            values="70;70;92;92;70"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -325,13 +343,13 @@ const StickManSquats = ({
         >
           <animate
             attributeName="cx"
-            values="50;69;50"
+            values="32;33;64;63;32"
             dur="2s"
             repeatCount="indefinite"
           />
           <animate
             attributeName="cy"
-            values="5;35;5"
+            values="8;8;35;35;8"
             dur="2s"
             repeatCount="indefinite"
           />
@@ -341,4 +359,4 @@ const StickManSquats = ({
   );
 };
 
-export default StickManSquats;
+export default StickManLunge;

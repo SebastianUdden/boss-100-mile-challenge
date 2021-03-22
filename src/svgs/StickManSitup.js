@@ -6,7 +6,7 @@ const SVG = styled.svg`
 const Line = styled.line``;
 const Circle = styled.circle``;
 
-const StickManSitups = ({
+const StickManSitup = ({
   frontColor = "#ffffff",
   middleColor = "#cccccc",
   backColor = "#888888",
@@ -279,4 +279,4 @@ const StickManSitups = ({
   );
 };
 
-export default StickManSitups;
+export default StickManSitup;

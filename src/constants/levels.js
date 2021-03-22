@@ -1,11 +1,12 @@
 import StickManBoatHold from "../svgs/StickManBoatHold";
 import StickManHipThrusters from "../svgs/StickManHipThrusters";
+import StickManLunge from "../svgs/StickManLunge";
 import StickManPlank from "../svgs/StickManPlank";
 import StickManPushup from "../svgs/StickManPushup";
 import StickManRunning from "../svgs/StickManRunning";
 import StickManSidePlank from "../svgs/StickManSidePlank";
-import StickManSitups from "../svgs/StickManSitups";
-import StickManSquats from "../svgs/StickManSquats";
+import StickManSitup from "../svgs/StickManSitup";
+import StickManSquat from "../svgs/StickManSquat";
 
 export const LEVELS = [
   {
@@ -61,7 +62,7 @@ export const LEVELS = [
     ],
     newChallenge: {
       name: "20 squats",
-      svg: <StickManSquats color="white" />,
+      svg: <StickManSquat color="white" />,
     },
   },
   {
@@ -71,7 +72,7 @@ export const LEVELS = [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
         name: "20 squats",
-        svg: <StickManSquats color="white" />,
+        svg: <StickManSquat color="white" />,
       },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
       {
@@ -95,7 +96,7 @@ export const LEVELS = [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
         name: "20 squats",
-        svg: <StickManSquats color="white" />,
+        svg: <StickManSquat color="white" />,
       },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
       {
@@ -113,7 +114,7 @@ export const LEVELS = [
     ],
     newChallenge: {
       name: "20 sit-ups",
-      svg: <StickManSitups color="white" />,
+      svg: <StickManSitup color="white" />,
     },
   },
   {
@@ -123,7 +124,7 @@ export const LEVELS = [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
         name: "20 squats",
-        svg: <StickManSquats color="white" />,
+        svg: <StickManSquat color="white" />,
       },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
       {
@@ -140,12 +141,48 @@ export const LEVELS = [
       },
       {
         name: "20 sit-ups",
-        svg: <StickManSitups color="white" />,
+        svg: <StickManSitup color="white" />,
       },
     ],
     newChallenge: {
       name: "30 seconds side plank x2",
       svg: <StickManSidePlank color="white" />,
+    },
+  },
+  {
+    name: "Level 8",
+    title: "Day 80 - 2021-03-22",
+    challenges: [
+      { name: "1.6km running", svg: <StickManRunning color="white" /> },
+      {
+        name: "20 squats",
+        svg: <StickManSquat color="white" />,
+      },
+      { name: "20 push-ups", svg: <StickManPushup color="white" /> },
+      {
+        name: "30 seconds plank",
+        svg: <StickManPlank color="white" />,
+      },
+      {
+        name: "30 seconds side plank x2",
+        svg: <StickManSidePlank color="white" />,
+      },
+      {
+        name: "20 hip thrusters",
+        svg: <StickManHipThrusters color="white" />,
+      },
+      {
+        name: "30 seconds boat hold",
+        svg: <StickManBoatHold color="white" />,
+      },
+      {
+        name: "20 sit-ups",
+        svg: <StickManSitup color="white" />,
+      },
+    ],
+    newChallenge: {
+      name: "20 lunges per leg",
+      svg: <StickManLunge color="white" />,
     },
   },
 ];
