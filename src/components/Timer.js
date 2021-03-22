@@ -91,6 +91,11 @@ const Left = styled.div`
   display: flex;
   align-items: center;
 `;
+const Motivation = styled.label`
+  margin-bottom: 7vh;
+  font-size: 40px;
+  color: orange;
+`;
 
 const getState = (count) => {
   if (count === 1) return "START";
@@ -154,6 +159,25 @@ const formatTime = (count) => {
 //   return seconds % 2 === 0 ? 220 : 440;
 // };
 
+const getRandomMotivation = () => {
+  const motivationalQuotes = [
+    "Go go go!",
+    "You can do it!",
+    "AWESOME!",
+    "Don't wuzz out!",
+    "Thrive where others fail!",
+    "BEAST MODE ACTIVATED!",
+    "You can beat Nemer, easily...",
+    "Dennis doesn't stand a chance against you!",
+    "Success is my only motherfuckin' option, failures not...",
+    "FEED THE FIRE!",
+    "I AM GIANT!",
+  ];
+  return motivationalQuotes[
+    Math.floor(Math.random() * motivationalQuotes.length)
+  ];
+};
+
 const Timer = () => {
   // const [audio, setAudio] = useState(
   //   new (window.AudioContext || window.webkitAudioContext)()
@@ -164,6 +188,7 @@ const Timer = () => {
   const [count, setCount] = useState(0);
   const [latest10, setLatest10] = useState(undefined);
   const [backgroundColor, setBackgroundColor] = useState("#222");
+  const [motivation, setMotivation] = useState("");
 
   const handleExpand = () => {
     const body = document.getElementsByTagName("body")[0];
@@ -228,12 +253,15 @@ const Timer = () => {
       setBackgroundColor("#222");
     }
     if (state === "START") {
+      setMotivation(getRandomMotivation());
       setBackgroundColor("green");
     }
     if (state === "PROGRESS") {
+      setMotivation(getRandomMotivation());
       setBackgroundColor("#888");
     }
     if (state === "DONE") {
+      setMotivation(getRandomMotivation());
       setBackgroundColor("red");
     }
   }, [state]);
@@ -247,6 +275,7 @@ const Timer = () => {
             <SmallButton
               onClick={(e) => {
                 e.stopPropagation();
+                setMotivation("");
                 setCount(0);
               }}
             >
@@ -278,6 +307,7 @@ const Timer = () => {
         <Arrow isUp={expanded}>&uarr;</Arrow>
       </Expand>
       <Content expanded={expanded}>
+        {start && expanded && <Motivation>{motivation}</Motivation>}
         <Time>
           <N>{minutes.left}</N>
           <N>{minutes.right}</N>
