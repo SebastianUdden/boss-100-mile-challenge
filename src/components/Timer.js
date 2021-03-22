@@ -172,7 +172,9 @@ const getRandomMotivation = () => {
     "Dennis doesn't stand a chance against you!",
     "Success is my only motherfuckin' option, failures not...",
     "FEED THE FIRE!",
-    "I AM GIANT!",
+    "The successful warrior is the average man, with laser-like focus.",
+    "You miss 100% of the shots you never take.",
+    "The climb is tough, but the view from the top is worth it.",
   ];
   return motivationalQuotes[
     Math.floor(Math.random() * motivationalQuotes.length)
