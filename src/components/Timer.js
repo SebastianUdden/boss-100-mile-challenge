@@ -92,7 +92,7 @@ const Left = styled.div`
   align-items: center;
 `;
 const Motivation = styled.label`
-  margin-bottom: 3vh;
+  margin: 5px 5px 3vh;
   font-size: 40px;
   color: orange;
   text-align: center;
