@@ -92,9 +92,10 @@ const Left = styled.div`
   align-items: center;
 `;
 const Motivation = styled.label`
-  margin-bottom: 7vh;
+  margin-bottom: 3vh;
   font-size: 40px;
   color: orange;
+  text-align: center;
 `;
 
 const getState = (count) => {
