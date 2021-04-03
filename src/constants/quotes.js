@@ -1,0 +1,17 @@
+export const MOTIVATIONAL_QUOTES = [
+  "Go go go!",
+  "You can do it!",
+  "AWESOME!",
+  "Don't wuzz out!",
+  "Thrive where others fail!",
+  "BEAST MODE ACTIVATED!",
+  "You can beat Nemer, easily...",
+  "Dennis doesn't stand a chance against you!",
+  "Success is my only motherfuckin' option, failures not...",
+  "FEED THE FIRE!",
+  "The successful warrior is the average man, with laser-like focus.",
+  "You miss 100% of the shots you never take.",
+  "The climb is tough, but the view from the top is worth it.",
+  "JUST DO IT!",
+  "Dream bigger!",
+];

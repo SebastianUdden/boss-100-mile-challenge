@@ -1,6 +1,7 @@
 import StickManBoatHold from "../svgs/StickManBoatHold";
 import StickManHipThrusters from "../svgs/StickManHipThrusters";
 import StickManLunge from "../svgs/StickManLunge";
+import StickManPikePress from "../svgs/StickManPikePress";
 import StickManPlank from "../svgs/StickManPlank";
 import StickManPushup from "../svgs/StickManPushup";
 import StickManRunning from "../svgs/StickManRunning";
@@ -183,6 +184,46 @@ export const LEVELS = [
     newChallenge: {
       name: "20 lunges per leg",
       svg: <StickManLunge color="white" />,
+    },
+  },
+  {
+    name: "Level 9",
+    title: "Day 90 - 2021-04-01",
+    challenges: [
+      { name: "1.6km running", svg: <StickManRunning color="white" /> },
+      {
+        name: "20 lunges per leg",
+        svg: <StickManLunge color="white" />,
+      },
+      {
+        name: "20 squats",
+        svg: <StickManSquat color="white" />,
+      },
+      { name: "20 push-ups", svg: <StickManPushup color="white" /> },
+      {
+        name: "30 seconds plank",
+        svg: <StickManPlank color="white" />,
+      },
+      {
+        name: "30 seconds side plank x2",
+        svg: <StickManSidePlank color="white" />,
+      },
+      {
+        name: "20 hip thrusters",
+        svg: <StickManHipThrusters color="white" />,
+      },
+      {
+        name: "30 seconds boat hold",
+        svg: <StickManBoatHold color="white" />,
+      },
+      {
+        name: "20 sit-ups",
+        svg: <StickManSitup color="white" />,
+      },
+    ],
+    newChallenge: {
+      name: "20 pike press",
+      svg: <StickManPikePress color="white" />,
     },
   },
 ];
