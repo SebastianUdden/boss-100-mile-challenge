@@ -50,10 +50,19 @@ const IconWrapper = styled.div`
   }
 `;
 
-const Level = ({ isFirst, name, title, challenges, newChallenge, svg }) => (
+const Level = ({
+  isFirst,
+  name,
+  title,
+  challenges,
+  newChallenge,
+  startDate,
+}) => (
   <Wrapper>
     <H2>{name}</H2>
-    <P>{title}</P>
+    <P>
+      {title} - {new Date(startDate).toLocaleDateString()}
+    </P>
     <UL>
       {challenges.map(({ name, svg }) => (
         <LI color={isFirst ? "orange" : "white"}>

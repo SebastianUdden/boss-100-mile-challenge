@@ -12,7 +12,7 @@ import StickManSquat from "../svgs/StickManSquat";
 export const LEVELS = [
   {
     name: "Level 1",
-    title: "Day 1 - 2021-01-02",
+    title: "Day 1",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
@@ -20,7 +20,7 @@ export const LEVELS = [
   },
   {
     name: "Level 2",
-    title: "Day 20 - 2021-01-21",
+    title: "Day 20",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
@@ -32,7 +32,7 @@ export const LEVELS = [
   },
   {
     name: "Level 3",
-    title: "Day 30 - 2021-01-31",
+    title: "Day 30",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
@@ -48,7 +48,7 @@ export const LEVELS = [
   },
   {
     name: "Level 4",
-    title: "Day 40 - 2021-02-10",
+    title: "Day 40",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       { name: "20 push-ups", svg: <StickManPushup color="white" /> },
@@ -68,7 +68,7 @@ export const LEVELS = [
   },
   {
     name: "Level 5",
-    title: "Day 50 - 2021-02-20",
+    title: "Day 50",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
@@ -92,7 +92,7 @@ export const LEVELS = [
   },
   {
     name: "Level 6",
-    title: "Day 60 - 2021-03-02",
+    title: "Day 60",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
@@ -120,7 +120,7 @@ export const LEVELS = [
   },
   {
     name: "Level 7",
-    title: "Day 70 - 2021-03-12",
+    title: "Day 70",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
@@ -152,7 +152,7 @@ export const LEVELS = [
   },
   {
     name: "Level 8",
-    title: "Day 80 - 2021-03-22",
+    title: "Day 80",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
@@ -188,7 +188,7 @@ export const LEVELS = [
   },
   {
     name: "Level 9",
-    title: "Day 90 - 2021-04-01",
+    title: "Day 90",
     challenges: [
       { name: "1.6km running", svg: <StickManRunning color="white" /> },
       {
