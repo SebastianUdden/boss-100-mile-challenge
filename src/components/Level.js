@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { calculateDaysTime } from "../utils";
 
 const Wrapper = styled.li`
   margin: 0 10px;
@@ -50,34 +51,73 @@ const IconWrapper = styled.div`
   }
 `;
 
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+const Total = styled.span`
+  opacity: 0.5;
+  font-size: x-small;
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+`;
+
+const getLevelDate = (startDate, value) => {
+  if (value === 1) {
+    return startDate;
+  } else {
+    const start = new Date(startDate);
+    const current = calculateDaysTime(value * 10);
+    start.setTime(start.getTime() + current);
+    return start;
+  }
+};
+
 const Level = ({
   isFirst,
   name,
+  level,
   title,
   challenges,
   newChallenge,
   startDate,
-}) => (
-  <Wrapper>
-    <H2>{name}</H2>
-    <P>
-      {title} - {new Date(startDate).toLocaleDateString()}
-    </P>
-    <UL>
-      {challenges.map(({ name, svg }) => (
-        <LI color={isFirst ? "orange" : "white"}>
-          {svg && <IconWrapper>{svg}</IconWrapper>}
-          <span>{name}</span>
-        </LI>
-      ))}
-      {newChallenge && (
-        <LI color="orange">
-          {newChallenge.svg && <IconWrapper>{newChallenge.svg}</IconWrapper>}
-          {newChallenge.name}
-        </LI>
-      )}
-    </UL>
-  </Wrapper>
-);
+}) => {
+  const levelDate = getLevelDate(startDate, level);
+  return (
+    <Wrapper>
+      <H2>{name}</H2>
+      <P>
+        {title} - {new Date(levelDate).toLocaleDateString()}
+      </P>
+      <UL>
+        {challenges.map(({ name, svg, amount, type, fromLevel }) => {
+          const levelDiff = level - fromLevel;
+          const totalAmount = Math.floor(amount * levelDiff * 10);
+          return (
+            <LI color={isFirst ? "orange" : "white"}>
+              {svg && <IconWrapper>{svg}</IconWrapper>}
+              <Column>
+                <span>{name}</span>
+                {!isFirst && (
+                  <Total>
+                    Completed: {totalAmount} {type}
+                  </Total>
+                )}
+              </Column>
+            </LI>
+          );
+        })}
+        {newChallenge && (
+          <LI color="orange">
+            {newChallenge.svg && <IconWrapper>{newChallenge.svg}</IconWrapper>}
+            {newChallenge.name}
+          </LI>
+        )}
+      </UL>
+    </Wrapper>
+  );
+};
 
 export default Level;

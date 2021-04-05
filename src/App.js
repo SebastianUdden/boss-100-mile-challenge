@@ -5,6 +5,7 @@ import "./App.css";
 import Exercises from "./components/Exercises";
 import Timer from "./components/Timer";
 import SpotifyLogo from "./components/SpotifyLogo";
+import { calculateDaysTime } from "./utils";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -61,7 +62,8 @@ const getDay = () => {
 };
 const saveDay = (day) => {
   const today = new Date();
-  const startDate = new Date(today - 24 * 60 * 60 * 1000 * day);
+  console.log({ day });
+  const startDate = new Date(today - calculateDaysTime(day));
   localStorage.setItem("start-date", startDate);
   return startDate;
 };
